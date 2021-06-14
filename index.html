@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sección de la descripción</title>
+    <script src="Descripcion.js"></script>
+</head>
+<body>
+    <template id="Caracteristicas">
+      <style>
+        .general_contain{
+          background-color: rgb(0, 0, 20);
+          color: rgb(214, 214, 214);
+          padding: 20px;
+          font-family: system-ui;
+          text-align: center;
+        }
+        .imagen{
+          font-variant: all-petite-caps;
+        }
+        h2{
+          font-weight: 400;
+          -webkit-box-reflect: below -7px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.12)));
+        }
+        img{
+          width: 300px;
+        }
+        .cabe_texto{
+          letter-spacing: 2px;
+        }
+        .cabe_texto button{
+          border-style: solid;
+          border-radius: 25px;
+          border-color: rgb(214, 214, 214);
+          background-color: rgb(0, 0, 20);
+          color: rgb(214, 214, 214);
+          font-variant: all-small-caps;
+          padding: 5px 20px 5px 20px;
+          letter-spacing: 1px;
+          border-bottom: 0;
+          font-weight: bold;
+          -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.12)));
+        }
+        .fin_texto{
+          display: -webkit-flex;
+        }
+        .derecha div, .izquierda div{
+          border-left: solid rgb(214, 220, 220);
+          background-color: rgba(200, 200, 200, 0.05);
+          margin: 7px;
+          padding: 1px;
+        }
+        .derecha, .izquierda{
+          width: 50%;
+          margin: 40px;
+        }
+        .titu_texto{
+          font-weight: 500;
+          letter-spacing: 1.2px;
+        }
+        /*EFECTOS*/
+        .cabe_texto button:hover{
+          background-color: white;
+          color: black;
+          cursor: pointer;
+        }
+        .derecha div:hover, .izquierda div:hover{
+          background-color: rgba(200, 200, 200, 0.1);
+        }
+      </style>
+      <section class="general_contain">
+        <div class="imagen">
+          <img src="https://www.mazdausa.com/siteassets/vehicles/2021/mazda3-sedan/trims/profile/2020-mazda3-sedan-premium-profile.png?w=640">
+        </div>
+        <div class="texto">
+          <div class="cabe_texto">
+            <h2>Características del auto</h2>
+            <button>Comprar</button>
+          </div>
+          <div class="fin_texto">
+            <div class="derecha">
+              <div>
+                <p class="titu_texto">Autonomía</p>
+                <p>547 km/h</p>
+              </div>
+              <div>
+                <p class="titu_texto">Autonomía</p>
+                <p>547 km/h</p>
+              </div>
+            </div>
+            <div class="izquierda">
+              <div>
+                <p class="titu_texto">Autonomía</p>
+                <p>547 km/h</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </template>
+      <section-caracteristicas></section-caracteristicas>
+      <section-caracteristicas></section-caracteristicas>
+  </body>
+</html>
