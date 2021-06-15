@@ -43,7 +43,21 @@ class Caracteristicas extends HTMLElement{
   }
   
   window.customElements.define('section-header', Header);
+//Joel
+class Content extends HTMLElement{
+  constructor(){
+    super();
+  }
+  
+  connectedCallback(){
+    let shadowRoot = this.attachShadow({mode: 'open'});
+    const tem = document.querySelector('#content');
+    const instance = tem.content.cloneNode(true);
+    shadowRoot.appendChild(instance);
+  }
+}
 
+window.customElements.define('section-content', Content);
   //Yomar
 
   class Footer extends HTMLElement{

@@ -527,8 +527,180 @@
       </div>
     </footer>
   </template>
+  <!-- Joel -->
+  <template id="content">
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #Contenido {
+        margin-top: 20px;
+      }
+
+      #carta_principal {
+        width: 80%;
+        margin: auto;
+      }
+
+      #foto_principal {
+        max-width: 100%;
+        height: auto;
+      }
+
+      #carta_principal h2 {
+        text-align: center;
+        font-size: 25px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        font-variant: small-caps;
+      }
+
+      .parrafo {
+        text-align: center;
+        color: rgb(81, 90, 90);
+        font-weight: 600;
+        letter-spacing: 1px;
+        line-height: 1.2;
+        margin-top: 25px;
+      }
+
+      .descubre {
+        margin: auto;
+        width: 125px;
+        color: rgb(81, 90, 90);
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 1.2;
+        margin-top: 35px;
+        text-align: center;
+        border-bottom: 1px solid #000;
+        padding-bottom: 3px;
+        margin-bottom: 20px;
+      }
+
+      #Grid_card {
+        margin-top: 80px;
+        min-height: 600px;
+        display: grid;
+        grid-gap: 2px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "foto carta"
+          "carta2 foto2";
+      }
+
+      #card1 {
+        grid-area: carta;
+        padding: 10%;
+      }
+
+      #card1 p {
+        text-align: left;
+        color: rgb(81, 90, 90);
+        font-weight: 600;
+        letter-spacing: 1px;
+        line-height: 1.2;
+        margin-top: 25px;
+      }
+
+      #card1 p:nth-child(3) {
+        width: 140px;
+        border-bottom: 1px solid #000;
+        padding-bottom: 3px;
+      }
+
+      #foto1 {
+        grid-area: foto;
+      }
+
+      #card2 {
+        grid-area: carta2;
+        padding: 10%;
+      }
+
+      #card2 p {
+        text-align: left;
+        color: rgb(81, 90, 90);
+        font-weight: 600;
+        letter-spacing: 1px;
+        line-height: 1.2;
+        margin-top: 25px;
+      }
+
+      #card2 p:nth-child(3) {
+        width: 140px;
+        border-bottom: 1px solid #000;
+        padding-bottom: 3px;
+      }
+
+      #foto2 {
+        grid-area: foto2;
+      }
+
+      video {
+        height: 100%;
+        width: 100%;
+      }
+
+      @media only screen and (max-width: 800px) {
+        #Grid_card {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(4, auto);
+          grid-template-areas: "carta"
+            "foto"
+            "carta2"
+            "foto2";
+        }
+      }
+    </style>
+    <div id="Contenido">
+      <div id="carta_principal">
+        <h2>Diseñado para inspirar</h2>
+        <p class="parrafo">La pintura Soul Red Crystal Metallic fue inspirada en el
+          brillo de metal calentado con intensidad, el tono mengua
+          y fluye entre el rojo rubí del metal fundido
+          y la tonalidad distintiva del ébano de los elementos que
+          lo rodean.</p>
+        <p class="descubre">DESCUBRE MÁS</p>
+      </div>
+      <img src="img/mazda_metal.webp" alt="Imagen de fondo" id="foto_principal">
+      <div id="Grid_card">
+        <div class="card" id="card1">
+          <h2>TECNOLOGÍA SKYACTIV® DE MAZDA: UN ENFOQUE MÁS INTELIGENTE</h2>
+          <p>Cuando los componentes de un sistema se diseñan para que funcionen
+            juntos, ese sistema operará con máxima eficiencia. Esta es
+            la idea simple de la tecnología Skyactiv® de Mazda.
+            Pero la eficiencia no es el único beneficio.</p>
+          <p>DESCUBRE MÁS</p>
+        </div>
+        <video id="video-banner foto1" autoplay="autoplay" loop="loop" muted=""
+          poster="https://cdn2.hubspot.net/hubfs/4560037/MAZDA/Nueva%20Web/Imagenes/Video%20Home%201.jpg">
+          <source src="https://cdn2.hubspot.net/hubfs/4560037/MAZDA/Nueva%20Web/Videos/Video%20Home%201.mp4"
+            type="video/mp4">
+        </video>
+        <div class="card" id="card2">
+          <h2>DIseñado para inspirar</h2>
+          <p>La pintura Soul Red Crystal Metallic fue inspirada en el
+            brillo de metal calentado con intensidad, el tono mengua
+            y fluye entre el rojo rubí del metal fundido
+            y la tonalidad distintiva del ébano de los elementos que
+            lo rodean.</p>
+          <p>DESCUBRE MÁS</p>
+        </div>
+        <video id="video-banner foto2" autoplay="autoplay" loop="loop" muted=""
+          poster="https://cdn2.hubspot.net/hubfs/4560037/MAZDA/Nueva%20Web/Imagenes/espacio-mazda-min.jpg">
+          <source src="https://cdn2.hubspot.net/hubfs/4560037/MAZDA/Nueva%20Web/Videos/interior-seats.mp4"
+            type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </template>
 
   <section-header></section-header>
+  <section-content></section-content>
   <miguel-castillo> </miguel-castillo>
   <section-caracteristicas></section-caracteristicas>
   <section-footer></section-footer>
