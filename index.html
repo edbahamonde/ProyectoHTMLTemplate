@@ -1,294 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sección de la descripción</title>
-    <script src="Descripcion.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sección de la descripción</title>
+  <script src="Descripcion.js"></script>
 </head>
+
 <body>
 
-    <!-- elemento Miguel -->
-    <template id="view-car">
-      <style>
-          .container_informacion{
-          display: grid;
-          width: 100%; 
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: 100%;
-          height: 500px;
-          background-color: rgb(0, 0, 20);
-          color: rgb(214, 214, 214);
-          margin-left: auto;
-          margin-right: auto;
-          font-family: system-ui;
-          text-align: center;
-          }  
-          #resum_opc1,  #resum_opc2, #resum_opc3{
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          }  
-          /* contenedor de contenido */
-          .container_informacion > #resum_opc1, .container_informacion > #resum_opc2, .container_informacion > #resum_opc3{
-          max-height: 81%;
-          overflow: hidden;
-          position: relative;
-          max-width: 85%;
-          display: block;
-          margin: auto;
-          }
-          /* contenedor de imagen */
-          .container_informacion >  #resum_opc1 > .imagen_car,
-          .container_informacion >  #resum_opc2 > .imagen_car,
-          .container_informacion > #resum_opc3 > .imagen_car{
-          max-height: 12.75rem;
-          max-width: 18.75rem;
-          }
-          .container_informacion >  #resum_opc1 > .imagen_car > img,
-          .container_informacion >  #resum_opc2 > .imagen_car > img,
-          .container_informacion > #resum_opc3 > .imagen_car > img{
-              height: 95%;
-              align-content: center;
-              justify-content: center;
-              width: 95%;
-              border-radius: 5px;
-              border: 3px solid #e6ebee;
-              cursor: pointer;
-          }
-          /* botones */
-          #boton-car{
-              border-style: solid;
-              border-radius: 15px;
-              border-color: rgb(214, 214, 214);
-              background-color: rgb(0, 0, 20);
-              color: rgb(214, 214, 214);
-              cursor: pointer;
-              font-size: 12px;
-              padding: 10px;
-              margin: 40px 0; 
-              font-family: system-ui;  
-              letter-spacing: 1px; 
-          }
-          #boton-car:hover{
-              background-color: rgba(200, 200, 200, 0.1);
-              background-color: white;
-              color: black;
-              cursor: pointer;
-          }
+  <!-- elemento Miguel -->
+  <template id="view-car">
+    <style>
+      .container_informacion {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100%;
+        height: 500px;
+        background-color: rgb(0, 0, 20);
+        color: rgb(214, 214, 214);
+        margin-left: auto;
+        margin-right: auto;
+        font-family: system-ui;
+        text-align: center;
+      }
 
-        
-      </style>
+      #resum_opc1,
+      #resum_opc2,
+      #resum_opc3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
 
-      <div class="container_informacion">
-          <div id="resum_opc1">
-            <div class="imagen_car">
-              <img src="mazdasdn.png"  id="img1">
-            </div>
-            <h3 id="titulo">Autos deportivos</h3>
-            <p id="text_resum">Ofrece velocidad y seguridad.</p>
-            <button id="boton-car" >Ver Autos</button>
-          </div>
-        
-          <div id="resum_opc2">
-            <div class="imagen_car">
-              <img src="mazdacx5.png" id="img2">
-              
-            </div>   
-            <h3 id="titulo">Utilitario todo terreno</h3>
-            <p id="text_resum">Equipamiento para campo y ciudad.</p>
-            <button id="boton-car" >Ver SUV</button>
-          </div>
-        
-          <div id="resum_opc3">
-            <div class="imagen_car">
-              <img src="mazdabt50.png" id="img3">
-              
-            </div>
-            <h3 id="titulo">Camionetas y Pickups</h3>
-            <p id="text_resum">Diseñado sofistificado para caminos difíciles. </p>
-            <button id="boton-car" >Ver Camionetas</button>
-          </div>
+      /* contenedor de contenido */
+      .container_informacion>#resum_opc1,
+      .container_informacion>#resum_opc2,
+      .container_informacion>#resum_opc3 {
+        max-height: 81%;
+        overflow: hidden;
+        position: relative;
+        max-width: 85%;
+        display: block;
+        margin: auto;
+      }
+
+      /* contenedor de imagen */
+      .container_informacion>#resum_opc1>.imagen_car,
+      .container_informacion>#resum_opc2>.imagen_car,
+      .container_informacion>#resum_opc3>.imagen_car {
+        max-height: 12.75rem;
+        max-width: 18.75rem;
+      }
+
+      .container_informacion>#resum_opc1>.imagen_car>img,
+      .container_informacion>#resum_opc2>.imagen_car>img,
+      .container_informacion>#resum_opc3>.imagen_car>img {
+        height: 95%;
+        align-content: center;
+        justify-content: center;
+        width: 95%;
+        border-radius: 5px;
+        border: 3px solid #e6ebee;
+        cursor: pointer;
+      }
+
+      /* botones */
+      #boton-car {
+        border-style: solid;
+        border-radius: 15px;
+        border-color: rgb(214, 214, 214);
+        background-color: rgb(0, 0, 20);
+        color: rgb(214, 214, 214);
+        cursor: pointer;
+        font-size: 12px;
+        padding: 10px;
+        margin: 40px 0;
+        font-family: system-ui;
+        letter-spacing: 1px;
+      }
+
+      #boton-car:hover {
+        background-color: rgba(200, 200, 200, 0.1);
+        background-color: white;
+        color: black;
+        cursor: pointer;
+      }
+    </style>
+
+    <div class="container_informacion">
+      <div id="resum_opc1">
+        <div class="imagen_car">
+          <img src="mazdasdn.png" id="img1">
+        </div>
+        <h3 id="titulo">Autos deportivos</h3>
+        <p id="text_resum">Ofrece velocidad y seguridad.</p>
+        <button id="boton-car">Ver Autos</button>
+      </div>
+
+      <div id="resum_opc2">
+        <div class="imagen_car">
+          <img src="mazdacx5.png" id="img2">
+
+        </div>
+        <h3 id="titulo">Utilitario todo terreno</h3>
+        <p id="text_resum">Equipamiento para campo y ciudad.</p>
+        <button id="boton-car">Ver SUV</button>
+      </div>
+
+      <div id="resum_opc3">
+        <div class="imagen_car">
+          <img src="mazdabt50.png" id="img3">
+
+        </div>
+        <h3 id="titulo">Camionetas y Pickups</h3>
+        <p id="text_resum">Diseñado sofistificado para caminos difíciles. </p>
+        <button id="boton-car">Ver Camionetas</button>
+      </div>
   </template>
 
   <br>
-    <!-- david -->
-    <template id="Caracteristicas">
-      <style>
-        .general_contain{
-          background-color: rgb(0, 0, 20);
-          color: rgb(214, 214, 214);
-          padding: 20px;
-          font-family: system-ui;
-          text-align: center;
-        }
-        .imagen{
-          font-variant: all-petite-caps;
-        }
-        .cabe_texto h2{
-          font-weight: 400;
-          -webkit-box-reflect: below -7px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.12)));
-        }
-        .imagen img{
-          width: 300px;
-        }
-        .cabe_texto{
-          letter-spacing: 2px;
-        }
-        .cabe_texto button{
-          border-style: solid;
-          border-radius: 25px;
-          border-color: rgb(214, 214, 214);
-          background-color: rgb(0, 0, 20);
-          color: rgb(214, 214, 214);
-          font-variant: all-small-caps;
-          padding: 5px 20px 5px 20px;
-          letter-spacing: 1px;
-          border-bottom: 0;
-          font-weight: bold;
-          -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.12)));
-        }
-        .fin_texto{
-          display: -webkit-flex;
-        }
-        .derecha div, .izquierda div{
-          border-left: solid rgb(214, 220, 220);
-          background-color: rgba(200, 200, 200, 0.05);
-          margin: 7px;
-          padding: 1px;
-        }
-        .derecha, .izquierda{
-          width: 50%;
-          margin: 40px;
-        }
-        .titu_texto{
-          font-weight: 500;
-          letter-spacing: 1.2px;
-        }
-        /*EFECTOS*/
-        .cabe_texto button:hover{
-          background-color: white;
-          color: black;
-          cursor: pointer;
-        }
-        .derecha div:hover, .izquierda div:hover{
-          background-color: rgba(200, 200, 200, 0.1);
-        }
-      </style>
+  <!-- david -->
+  <template id="Caracteristicas">
+    <style>
+      .general_contain {
+        background-color: rgb(0, 0, 20);
+        color: rgb(214, 214, 214);
+        padding: 20px;
+        font-family: system-ui;
+        text-align: center;
+      }
 
-      <section class="general_contain">
-        <div class="imagen">
-          <img src="https://www.mazdausa.com/siteassets/vehicles/2021/mazda3-sedan/trims/profile/2020-mazda3-sedan-premium-profile.png?w=640">
-        </div>
-        <div class="texto">
-          <div class="cabe_texto">
-            <h2>Características del auto</h2>
-            <button>Comprar</button>
-          </div>
-          <div class="fin_texto">
-            <div class="derecha">
-              <div>
-                <p class="titu_texto">Autonomía</p>
-                <p>547 km/h</p>
-              </div>
-              <div>
-                <p class="titu_texto">Autonomía</p>
-                <p>547 km/h</p>
-              </div>
-            </div>
-            <div class="izquierda">
-              <div>
-                <p class="titu_texto">Autonomía</p>
-                <p>547 km/h</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </template>
-      <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+      .imagen {
+        font-variant: all-petite-caps;
+      }
+
+      .cabe_texto h2 {
+        font-weight: 400;
+        -webkit-box-reflect: below -7px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.12)));
+      }
+
+      .imagen img {
+        width: 300px;
+      }
+
+      .cabe_texto {
+        letter-spacing: 2px;
+      }
+
+      .cabe_texto button {
+        border-style: solid;
+        border-radius: 25px;
+        border-color: rgb(214, 214, 214);
+        background-color: rgb(0, 0, 20);
+        color: rgb(214, 214, 214);
+        font-variant: all-small-caps;
+        padding: 5px 20px 5px 20px;
+        letter-spacing: 1px;
+        border-bottom: 0;
+        font-weight: bold;
+        -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.12)));
+      }
+
+      .fin_texto {
+        display: -webkit-flex;
+      }
+
+      .derecha div,
+      .izquierda div {
+        border-left: solid rgb(214, 220, 220);
+        background-color: rgba(200, 200, 200, 0.05);
+        margin: 7px;
+        padding: 1px;
+      }
+
+      .derecha,
+      .izquierda {
+        width: 50%;
+        margin: 40px;
+      }
+
+      .titu_texto {
+        font-weight: 500;
+        letter-spacing: 1.2px;
+      }
+
+      /*EFECTOS*/
+      .cabe_texto button:hover {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+      }
+
+      .derecha div:hover,
+      .izquierda div:hover {
+        background-color: rgba(200, 200, 200, 0.1);
+      }
     </style>
-    <template id="header">
-        <style>
-            * {
-              box-sizing: border-box;
-              margin: 0;
-              padding: 0;
-            }
 
-            .general_contain{
-                background-color: rgb(60, 57, 57);
-                color: rgb(214, 214, 214);
-                padding: 11px;
-                font-family: system-ui;
-                text-align: center;
-            }
-            .header {
-              overflow: hidden;
-              padding: 20px 10px;
-            }
-
-            .header a {
-              float: left;
-              color: rgb(198, 218, 217);
-              text-align: center;
-              padding: 9px;
-              text-decoration: none;
-              font-size: 18px; 
-              line-height: 25px;
-              border-radius: 4px;
-              margin: 10px;
-            }
-            
-            .header a.logo {
-              font-size: 25px;
-              font-weight: bold;
-            }
-            
-            .header a:hover {
-              background-color: #ddd;
-              color: black;
-            }
-            
-            .header a.active {
-              background-color: dodgerblue;
-              color: white;
-            }
-            
-            .header-right {
-              float: right;
-            }
-            
-            @media screen and (max-width: 500px) {
-              .header a {
-                float: none;
-                display: block;
-                text-align: left;
-              }
-              
-              .header-right {
-                float: none;
-              }
-            }
-            </style>
-      <section class="general_contain">
-        <div class="header">
-            <a href="#default" class="logo">CAR</a>
-            <div class="header-right">
-              <a class="active" href="#home">Inicio</a>
-              <a href="#contact">Contacto</a>
-              <a href="#about">Acerca de</a>
+    <section class="general_contain">
+      <div class="imagen">
+        <img
+          src="https://www.mazdausa.com/siteassets/vehicles/2021/mazda3-sedan/trims/profile/2020-mazda3-sedan-premium-profile.png?w=640">
+      </div>
+      <div class="texto">
+        <div class="cabe_texto">
+          <h2>Características del auto</h2>
+          <button>Comprar</button>
+        </div>
+        <div class="fin_texto">
+          <div class="derecha">
+            <div>
+              <p class="titu_texto">Autonomía</p>
+              <p>547 km/h</p>
+            </div>
+            <div>
+              <p class="titu_texto">Autonomía</p>
+              <p>547 km/h</p>
             </div>
           </div>
-      </section>
-    </template>
-      <section-header></section-header>
-      <miguel-castillo> </miguel-castillo>
-      <section-caracteristicas></section-caracteristicas>
-  </body>
+          <div class="izquierda">
+            <div>
+              <p class="titu_texto">Autonomía</p>
+              <p>547 km/h</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </template>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <template id="header">
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .general_contain {
+        background-color: rgb(60, 57, 57);
+        color: rgb(214, 214, 214);
+        padding: 11px;
+        font-family: system-ui;
+        text-align: center;
+      }
+
+      .header {
+        overflow: hidden;
+        padding: 20px 10px;
+      }
+
+      .header a {
+        float: left;
+        color: rgb(198, 218, 217);
+        text-align: center;
+        padding: 9px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+        margin: 10px;
+      }
+
+      .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      .header a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .header a.active {
+        background-color: dodgerblue;
+        color: white;
+      }
+
+      .header-right {
+        float: right;
+      }
+
+      @media screen and (max-width: 500px) {
+        .header a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+
+        .header-right {
+          float: none;
+        }
+      }
+    </style>
+    <section class="general_contain">
+      <div class="header">
+        <a href="#default" class="logo">MAZDA - ECUADOR</a>
+        <div class="header-right">
+          <a class="active" href="#home">Inicio</a>
+          <a href="#contact">Contacto</a>
+          <a href="#about">Acerca de</a>
+        </div>
+      </div>
+    </section>
+  </template>
+  <template id="Footer">
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      footer {
+        width: 100%;
+        background: #202020;
+        color: white;
+
+      }
+
+      .container-footer-all {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px;
+      }
+
+      .container-body {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .colum1 {
+        max-width: 400px;
+      }
+
+      .colum1 h1 {
+        font-size: 22px;
+      }
+
+      .colum1 p {
+        font-size: 14px;
+        color: #C7C7C7;
+        margin-top: 20px;
+      }
+
+      .colum2 {
+        max-width: 400px;
+
+      }
+
+      .colum2 h1 {
+        font-size: 22px;
+      }
+
+      .row {
+        margin-top: 20px;
+        display: flex;
+      }
+
+      .row img {
+        width: 36px;
+        height: 36px;
+      }
+
+      .row label {
+        margin-top: 10px;
+        margin-left: 20px;
+        color: #C7C7C7;
+      }
+
+      .colum3 {
+        max-width: 400px;
+      }
+
+      .colum3 h1 {
+        font-size: 22px;
+      }
+
+      .row2 {
+        margin-top: 20px;
+        display: flex;
+      }
+
+      .row2 img {
+        width: 36px;
+        height: 36px;
+      }
+
+      .row2 label {
+        margin-top: 10px;
+        margin-left: 20px;
+        max-width: 140px;
+      }
+
+      .container-footer {
+        width: 100%;
+        background: #101010;
+      }
+
+      .footer {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+      }
+
+      .copyright {
+        color: #C7C7C7;
+      }
+
+      .copyright a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+
+      .information a {
+        text-decoration: none;
+        color: #C7C7C7;
+      }
+
+
+      @media screen and (max-width: 1100px) {
+
+        .container-body {
+          flex-wrap: wrap;
+        }
+
+        .colum1 {
+          max-width: 100%;
+        }
+
+        .colum2,
+        .colum3 {
+          margin-top: 40px;
+        }
+      }
+    </style>
+    <footer>
+
+      <div class="container-footer-all">
+
+        <div class="container-body">
+
+          <div class="colum3">
+
+            <h1>Información Contactos</h1>
+
+            <div class="row2">
+              <img src="icon/house.png">
+              <label>Mazda - EC,
+                Santo Domingo de los Tsáchilas
+                Via Quevedo km 10
+                Manzana # 27</label>
+            </div>
+
+            <div class="row2">
+              <img src="icon/smartphone.png">
+              <label>+593 - 7958-0965</label>
+            </div>
+
+            <div class="row2">
+              <img src="icon/contact.png">
+              <label>mazda.ec@gmail.com</label>
+            </div>
+
+          </div>
+
+
+          <div class="colum2">
+
+            <h1>Redes Sociales</h1>
+
+            <div class="row">
+              <img src="icon/facebook.png">
+              <label>Síguenos en Facebook</label>
+            </div>
+            <div class="row">
+              <img src="icon/twitter.png">
+              <label>Síguenos en Twitter</label>
+            </div>
+            <div class="row">
+              <img src="icon/instagram.png">
+              <label>Síguenos en Instagram</label>
+            </div>
+          </div>
+
+          <div class="colum1">
+            <h1>Más información de la compañía</h1>
+
+            <p>Esta compañía se dedica a la compra y venta de vehículos de nuestra marca para poderle
+              asesorar de la mejor manera a todos nuestros prestigiosos cliente.</p>
+
+            <h3>
+              <p> AVISO DE PRIVACIDAD
+                ⒸMAZDA ECUADOR OPERATION. TODOS LOS DERECHOS RESERVADOS.</p>
+            </h3>
+
+          </div>
+        </div>
+      </div>
+      <div class="container-footer">
+        <div class="footer">
+          <div class="copyright">
+            © 2021 Todos los Derechos Reservados | <a href="">Mazda - EC</a>
+          </div>
+
+          <div class="information">
+            <a href="">Información Compañía</a> | <a href="">Privación y Política</a> | <a href="">Términos y
+              Condiciones</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  </template>
+
+  <section-header></section-header>
+  <miguel-castillo> </miguel-castillo>
+  <section-caracteristicas></section-caracteristicas>
+  <section-footer></section-footer>
+
+</body>
+
 </html>
