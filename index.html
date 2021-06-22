@@ -6,10 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sección de la descripción</title>
+  <link rel="stylesheet" href="index_estilos.css">
+  <link rel="stylesheet" href="car.css">
   <script src="Descripcion.js"></script>
+  
 </head>
 
-<body>
+<body class="body">
 
   <!-- elemento Miguel -->
   <template id="view-car">
@@ -537,6 +540,7 @@
 
       #Contenido {
         margin-top: 20px;
+        text-align: center;
       }
 
       #carta_principal {
@@ -666,7 +670,7 @@
           lo rodean.</p>
         <p class="descubre">DESCUBRE MÁS</p>
       </div>
-      <img src="img/mazda_metal.webp" alt="Imagen de fondo" id="foto_principal">
+      <img src="img/imagen_principal.png" alt="Imagen de fondo" id="foto_principal">
       <div id="Grid_card">
         <div class="card" id="card1">
           <h2>TECNOLOGÍA SKYACTIV® DE MAZDA: UN ENFOQUE MÁS INTELIGENTE</h2>
@@ -700,10 +704,32 @@
   </template>
 
   <section-header></section-header>
+  <button class="btn1">Modo Oscuro</button>
   <section-content></section-content>
   <miguel-castillo> </miguel-castillo>
   <section-caracteristicas></section-caracteristicas>
+
+  <div class="color_carro">
+    <p>Modelo Mazdasdn</p>
+    <div id="container">
+
+    </div>
+    <div class="botones">
+        <p>Colores</p>
+        <button class="boton" id="btnazul"></button>
+        <button class="boton" id="btnplomoclaro"></button>
+        <button class="boton" id="btnblanco"></button>
+        <button class="boton" id="btnrojo"></button>
+        <button class="boton" id="btnplomomedio"></button>
+        <button class="boton" id="btnnegro"></button>
+        <button class="boton" id="btnplomooscuro"></button>
+    </div>
+</div>
+<script src="car.js" type="module"></script>
+
   <section-footer></section-footer>
+
+  <script type="module" src="app.js"></script>
 
 </body>
 
