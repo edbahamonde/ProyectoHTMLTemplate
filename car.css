@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    width: 400px;
+    height: 220px;
+    margin: 20px auto;
+}
+.img{
+    width: 100%;
+}
+.color_carro{
+    text-align: center;
+    padding: 15px;
+}
+.color_carro p{
+    font-variant: small-caps;
+    font-size: xxx-large;
+    letter-spacing: 2px;
+    font-family: system-ui;
+    font-weight: 500;
+}
+.boton{
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 15px;
+}
+.botones p{
+    font-weight: 400;
+    font-size: x-large;
+}
+#btnazul{
+    background-color: #415570;
+}
+#btnplomoclaro{
+    background-color: #afb0b4;
+}
+#btnblanco{
+    background-color: #e6e7e8;
+}
+#btnrojo{
+    background-color: #eb4c53;
+}
+#btnplomomedio{
+    background-color: #808389;
+}
+#btnnegro{
+    background-color: #3d3e41;
+}
+#btnplomooscuro{
+    background-color: #6c645f;
+}
