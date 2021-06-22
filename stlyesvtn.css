@@ -1,0 +1,85 @@
+.cotizacion_informacion {
+    display: grid;
+    width: 100%;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows:repeat(2, 1fr);
+    height: 800px;
+    background-color: rgb(0, 0, 20);
+    color: rgb(214, 214, 214);
+    margin-left: auto;
+    margin-right: auto;
+    font-family: system-ui;
+    text-align: center;
+  }
+
+  .seccion_informacion{
+    margin-bottom: 60px;
+  }
+  
+  #resum_opc1,
+  #resum_opc2,
+  #resum_opc3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* contenedor de contenido */
+  .cotizacion_informacion>#resum_opc1,
+  .cotizacion_informacion>#resum_opc2,
+  .cotizacion_informacion>#resum_opc3,
+  .cotizacion_informacion>#resum_opc4
+   {
+    max-height: 81%;
+    overflow: hidden;
+    position: relative;
+    max-width: 85%;
+    display: block;
+    margin: auto;
+  }
+
+  /* contenedor de imagen */
+  .cotizacion_informacion>#resum_opc1>.imagen_car,
+  .cotizacion_informacion>#resum_opc2>.imagen_car,
+  .cotizacion_informacion>#resum_opc3>.imagen_car,
+  .cotizacion_informacion>#resum_opc4>.imagen_car {
+    max-height: 12.75rem;
+    max-width: 18.75rem;
+  }
+
+  .cotizacion_informacion>#resum_opc1>.imagen_car>img,
+      .cotizacion_informacion>#resum_opc2>.imagen_car>img,
+      .cotizacion_informacion>#resum_opc3>.imagen_car>img,
+      .cotizacion_informacion>#resum_opc4>.imagen_car>img{
+        height: 95%;
+        align-content: center;
+        justify-content: center;
+        width: 95%;
+        border-radius: 5px;
+        border: 3px solid #e6ebee;
+        cursor: pointer;
+      }
+
+  /* aqui va el texto */  
+  #abrv {
+    border-style: solid;
+    border-radius: 15px;
+    border-color: rgb(214, 214, 214);
+    background-color: rgb(0, 0, 20);
+    color: rgb(214, 214, 214);
+    cursor: pointer;
+    font-size: 12px;
+    padding: 10px;
+    margin: 40px 0;
+    font-family: system-ui;
+    letter-spacing: 1px;
+    width: 100px;
+  }
+
+  #abrv:hover {
+    background-color: rgba(200, 200, 200, 0.1);
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
