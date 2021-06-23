@@ -9,8 +9,8 @@ class CajaContenedor extends HTMLElement{
       shadowRoot.innerHTML =  `
       <style>
         .box, .box2{
-            width: 300px;
-            height: 200px;
+            width: 200px;
+            height: 100px;
             color: rgb(214, 214, 214);  
             background-color: rgb(0, 0, 20); 
             display: flex;
@@ -23,7 +23,7 @@ class CajaContenedor extends HTMLElement{
             transition: transform 1s;
         }
         .box:hover{
-            font-size: 0;
+            font-size:gray;
             color: #2abb9b;
             transform: scale(1);
             display:block;
@@ -84,7 +84,7 @@ class CajaContenedor extends HTMLElement{
         }
         .box2:hover{
             font-size: 0;
-            color: #2abb9b;
+            color: #2abb8b;
             transform: scale(1);
             display:block;
             background-image: url(img/vision.jpeg); 
